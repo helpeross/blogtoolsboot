@@ -21,7 +21,7 @@ Some links on this site are **affiliate links**. If you click one and make a pur
 
 ## Editorial independence
 
-Earning a commission never changes our opinions. We do not write positive reviews in exchange for money or free products. Our recommendations are based on our own testing, research and judgment. Products we genuinely believe in get recommended — regardless of whether they are eligible for affiliate commissions.
+Earning a commission never changes our opinions. We do not write positive reviews in exchange for money or free products. Our recommendations are based on our own research and judgment. Products we genuinely believe in get recommended — regardless of whether they are eligible for affiliate commissions.
 
 ## Disclosure on individual pages
 
