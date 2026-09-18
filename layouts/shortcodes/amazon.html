@@ -7,6 +7,9 @@
     tag    : your associates tag (defaults to params.amazonTag)
     text   : custom link text
     note   : extra note after the link
+  Master switch: site.Params.amazonLinksEnabled (false before Amazon approval,
+  true after). When disabled, no affiliate link is rendered — only the product
+  name, keeping the site fully compliant during the review period.
 */ -}}
 {{- $asin := .Get "asin" | default "" -}}
 {{- $name := .Get "name" | default "product" -}}
@@ -15,9 +18,14 @@
 {{- $text := .Get "text" | default (printf "Check price on Amazon" ) -}}
 {{- $note := .Get "note" | default "" -}}
 {{- $url := printf "https://www.%s/dp/%s?tag=%s&linkCode=ll1" $store $asin $tag -}}
+{{- $enabled := site.Params.amazonLinksEnabled | default true -}}
+{{- if $enabled }}
 <div class="amazon-card">
   <p class="amazon-disclosure"><strong>Product:</strong> {{ $name }}</p>
   <p class="amazon-disclosure"><em>Disclosure:</em> As an Amazon Associate we earn from qualifying purchases. Buying through the link below costs you nothing extra.</p>
   <p><a href="{{ $url }}" target="_blank" rel="sponsored noopener nofollow" class="amazon-link">{{ $text }} →</a></p>
   {{- with $note }}<p class="amazon-note"><small>{{ . }}</small></p>{{ end }}
 </div>
+{{- else -}}
+<p class="amazon-note"><strong>{{ $name }}</strong></p>
+{{- end }}

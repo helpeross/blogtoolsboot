@@ -44,6 +44,10 @@ pygmentsUseClasses = true
   # Amazon Associates tag（替换为你自己的联盟 tag）
   amazonTag = "toolsboot-20"
 
+  # 联盟链接总开关：未通过 Amazon 审核前保持 false（短代码只输出纯文本、不渲染任何链接），
+  # 通过审核后改为 true，全站联盟链接即刻恢复，无需改动文章。
+  amazonLinksEnabled = false
+
   # 站点标识（炭黑方块 + 橙色 TB）
   [params.label]
     text = "TBblog"

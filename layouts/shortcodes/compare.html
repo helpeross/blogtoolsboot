@@ -16,6 +16,7 @@
 {{ $cta := slice }}
 {{ with .Get "cta" }}{{ $cta = split . "," }}{{ end }}
 {{ $tag := .Get "tag" | default (site.Params.amazonTag | default "toolsboot-20") }}
+{{ $enabled := site.Params.amazonLinksEnabled | default true }}
 {{ $rows := split .Inner "\n" }}
 
 <div class="compare-table-wrap">
@@ -48,7 +49,7 @@
         </tr>
       {{ end }}
     {{ end }}
-    {{ if $cta }}
+    {{ if and $cta $enabled }}
     <tr class="compare-cta-row">
       <td>Check Price</td>
       {{ range $i, $asinRaw := $cta }}
