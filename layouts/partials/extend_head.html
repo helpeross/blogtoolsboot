@@ -6,3 +6,13 @@
 <meta name="author" content="TBblog Editorial Team">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0f0f0f">
+
+{{- /* Home page inline search (reuses PaperMod's fastsearch bundle) */}}
+{{- if .IsHome }}
+{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
+{{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
+{{- $license_js := resources.Get "js/license.js" }}
+{{- $search := (slice $fusejs $license_js $fastsearch) | resources.Concat "assets/js/home-search.js" | fingerprint }}
+<link crossorigin="anonymous" rel="preload" as="fetch" href="/index.json">
+<script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
+{{- end }}

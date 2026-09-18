@@ -11,6 +11,12 @@
       <a class="btn-amazon" href="{{ "posts/" | relLangURL }}">Browse Guides</a>
       <a class="btn-secondary" href="{{ "about/" | relLangURL }}">How We Review</a>
     </div>
+    <div class="tk-search">
+      <div id="searchbox" class="searchbox">
+        <input id="searchInput" disabled placeholder="Search guides and tech topics..." aria-label="search" type="search" autocomplete="off" maxlength="64">
+        <ul id="searchResults" class="searchResults" aria-label="search results"></ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -67,10 +73,10 @@
 {{/* ============== LATEST GUIDE ============== */}}
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
-{{- with first 1 $pages }}
+{{- with first 4 $pages }}
 <section class="tk-latest">
   <header class="tk-section-head">
-    <h2>Latest Guide</h2>
+    <h2>Latest Guides</h2>
     <a class="tk-link-all" href="{{ "posts/" | relLangURL }}">All guides &rarr;</a>
   </header>
   <div class="tk-latest-grid">
