@@ -39,6 +39,7 @@ body {
   box-shadow: none;
 }
 .header-nav {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -1168,8 +1169,8 @@ body {
 }
 .tk-search-overlay {
   position: absolute;
-  top: calc(100% - 2px);
-  right: 24px;
+  top: 100%;
+  right: 0.75rem;
   z-index: 1200;
   width: 360px;
   max-width: calc(100vw - 32px);
