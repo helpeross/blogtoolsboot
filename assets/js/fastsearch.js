@@ -50,6 +50,7 @@ const reset = () => {
     lastResult = null;
     resList.innerHTML = '';
     sInput.value = '';
+    searchOverlay?.setAttribute('hidden', '');
     sInput.focus();
 };
 
@@ -190,5 +191,29 @@ document.addEventListener('keydown', (event) => {
         if (active?.matches?.('.entry-link')) {
             active.click();
         }
+    }
+});
+
+/* TBblog: floating search overlay toggle (magnifier button in header) */
+const searchBtn = document.getElementById('tkSearchBtn');
+const searchOverlay = document.getElementById('tkSearchOverlay');
+const toggleOverlay = (show) => {
+    if (!searchOverlay) { return; }
+    if (show) {
+        searchOverlay.removeAttribute('hidden');
+        sInput.disabled = false;
+        window.setTimeout(() => { sInput?.focus(); }, 50);
+    } else {
+        searchOverlay.setAttribute('hidden', '');
+    }
+};
+searchBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleOverlay(searchOverlay?.hasAttribute('hidden'));
+});
+searchBtn?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleOverlay(searchOverlay?.hasAttribute('hidden'));
     }
 });

@@ -79,11 +79,7 @@ pygmentsUseClasses = true
     name = "Reviews"
     url = "/posts/"
     weight = 10
-  [[menu.main]]
-    identifier = "search"
-    name = "Search"
-    url = "/search/"
-    weight = 20
+
   [[menu.main]]
     identifier = "about"
     name = "About"
