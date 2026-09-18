@@ -37,7 +37,7 @@ This data is used for analytics, security and to improve our content.
 Our site uses cookies and similar technologies for the following purposes:
 
 - **Essential cookies**: required for basic site functionality.
-- **Analytics cookies**: to understand how visitors use the site (if analytics is enabled, we will name the provider here, e.g. Cloudflare Web Analytics).
+- **Analytics**: we currently do not use third-party analytics services that set cookies on your device. If we enable analytics in the future, we will update this policy to name the provider.
 - **Advertising / affiliate cookies**: used by third parties (see below) to track referrals and purchases.
 
 You can control or delete cookies through your browser settings. Disabling cookies may affect some site features.
@@ -87,7 +87,7 @@ Depending on your jurisdiction (e.g. GDPR, CCPA), you may have rights to:
 - Object to or restrict processing
 - Withdraw consent where processing is based on consent
 
-To exercise any of these rights, contact us at: **<your-email@example.com>**
+To exercise any of these rights, contact us at: **<972803741@qq.com>**
 
 ## 8. Changes to this policy
 
@@ -95,4 +95,4 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 
 ## 9. Contact
 
-Questions about this policy? Contact us at: **<your-email@example.com>**
+Questions about this policy? Contact us at: **<972803741@qq.com>**

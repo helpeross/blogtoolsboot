@@ -1,6 +1,8 @@
 {{/* TBblog: per-post affiliate disclosure — Amazon Associates Operating Policies compliant.
       Rendered at the end of every article's content body. */}}
+{{- if site.Params.amazonLinksEnabled | default true -}}
 <div class="affiliate-disclosure">
   <strong>Affiliate Disclosure</strong>
-  As an Amazon Associate, TBblog earns from qualifying purchases. The links in this article are affiliate links, meaning we may earn a commission at no additional cost to you if you click through and make a purchase. This helps us keep producing independent reviews. All opinions and recommendations are our own. <a href="{{ "affiliate-disclosure/" | relLangURL }}">Read our full disclosure</a>.
+  As an Amazon Associate, TBblog earns from qualifying purchases. The links in this article are affiliate links, meaning we may earn a commission at no additional cost to you if you click through and make a purchase. This helps us keep producing independent reviews. All opinions and recommendations are our own. Prices mentioned in articles are approximate and may change — always check the retailer for current pricing. <a href="{{ "affiliate-disclosure/" | relLangURL }}">Read our full disclosure</a>.
 </div>
+{{- end }}

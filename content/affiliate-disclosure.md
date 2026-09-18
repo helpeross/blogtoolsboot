@@ -27,6 +27,10 @@ Earning a commission never changes our opinions. We do not write positive review
 
 Where affiliate links appear within an article, they are clearly marked (for example, with a disclosure note and a "Check price on Amazon" box). This page serves as the site-wide disclosure required by the **U.S. Federal Trade Commission (FTC)** and by the Amazon Associates operating agreement.
 
+## Prices
+
+Product prices mentioned in our articles are approximate and change frequently. Always check the retailer (e.g. Amazon) for the current price before buying.
+
 ## Questions?
 
-If you have any questions about our affiliate relationships, please contact us: **<your-email@example.com>**
+If you have any questions about our affiliate relationships, please contact us: **<972803741@qq.com>**

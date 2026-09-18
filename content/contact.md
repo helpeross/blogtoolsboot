@@ -11,7 +11,7 @@ We'd love to hear from you. Whether it's a question about a review, a product su
 
 ## General inquiries
 
-**Email:** <your-email@example.com>
+**Email:** <972803741@qq.com>
 
 We typically reply within **2–3 business days**.
 
@@ -32,7 +32,7 @@ Spot a factual error in one of our articles? Email us and we will verify and fix
 
 ## Business / partnership
 
-For advertising or partnership proposals: <your-email@example.com>
+For advertising or partnership proposals: <972803741@qq.com>
 
 ---
 
