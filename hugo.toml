@@ -62,6 +62,7 @@ pygmentsUseClasses = true
     threshold = 0.4
     minMatchCharLength = 0
     keys = ["title", "permalink", "summary", "content"]
+    limit = 6
 
   # 站点图标（替换为你的图标后启用）
   # [params.assets]
