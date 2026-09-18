@@ -1,0 +1,147 @@
+{{- define "main" }}
+
+{{/* ============== HERO ============== */}}
+<section class="tk-hero">
+  <div class="tk-hero-grid" aria-hidden="true"></div>
+  <div class="tk-hero-inner">
+    <span class="tk-eyebrow">Hands-On Tech Reviews</span>
+    <h1 class="tk-hero-title">Buy the right gear,<br><span class="tk-accent">the first time.</span></h1>
+    <p class="tk-hero-sub">Straightforward guides and honest reviews for IT hardware, laptops, peripherals and consumer electronics. We test the gear and translate spec sheets into real-world verdicts.</p>
+    <div class="tk-hero-cta">
+      <a class="btn-amazon" href="{{ "posts/" | relLangURL }}">Browse Guides</a>
+      <a class="btn-secondary" href="{{ "about/" | relLangURL }}">How We Review</a>
+    </div>
+  </div>
+</section>
+
+{{/* ============== STATS STRIP ============== */}}
+<section class="tk-stats">
+  <div class="tk-stat">
+    <div class="tk-stat-num">{{ len (where site.RegularPages "Type" "in" site.Params.mainSections) }}+</div>
+    <div class="tk-stat-label">In-Depth Guides</div>
+  </div>
+  <div class="tk-stat">
+    <div class="tk-stat-num">{{ len site.Taxonomies.categories }}</div>
+    <div class="tk-stat-label">Categories</div>
+  </div>
+  <div class="tk-stat">
+    <div class="tk-stat-num">100%</div>
+    <div class="tk-stat-label">Independent</div>
+  </div>
+  <div class="tk-stat">
+    <div class="tk-stat-num">0</div>
+    <div class="tk-stat-label">Sponsored Rankings</div>
+  </div>
+</section>
+
+{{/* ============== HOW WE REVIEW ============== */}}
+<section class="tk-method">
+  <header class="tk-section-head">
+    <h2>How We Review</h2>
+    <p>Every guide follows the same four-step protocol. No shortcuts, no paid placements.</p>
+  </header>
+  <ol class="tk-steps">
+    <li>
+      <span class="tk-step-num">01</span>
+      <h3>Spec Audit</h3>
+      <p>Verify manufacturer claims against official datasheets and independent benchmarks.</p>
+    </li>
+    <li>
+      <span class="tk-step-num">02</span>
+      <h3>Hands-on Testing</h3>
+      <p>Use products in real workflows — typing, charging, networking, rendering — not just on paper.</p>
+    </li>
+    <li>
+      <span class="tk-step-num">03</span>
+      <h3>Real-world Context</h3>
+      <p>Translate specs into what you actually feel: speed, noise, reliability, everyday usability.</p>
+    </li>
+    <li>
+      <span class="tk-step-num">04</span>
+      <h3>Honest Verdict</h3>
+      <p>Weigh price, warranty and flaws against the value. If something isn't worth it, we say so.</p>
+    </li>
+  </ol>
+</section>
+
+{{/* ============== LATEST GUIDE ============== */}}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- with first 1 $pages }}
+<section class="tk-latest">
+  <header class="tk-section-head">
+    <h2>Latest Guide</h2>
+    <a class="tk-link-all" href="{{ "posts/" | relLangURL }}">All guides &rarr;</a>
+  </header>
+  <div class="tk-latest-grid">
+    {{- range . }}
+    <article class="tk-feature-card">
+      <div class="tk-feature-body">
+        <span class="tk-tag">Featured</span>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Description | default .Summary | plainify | truncate 140 }}</p>
+        <div class="tk-feature-meta">
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
+          <span>{{ .ReadingTime }} min read</span>
+          <span>{{ .WordCount }} words</span>
+        </div>
+        <a class="btn-primary" href="{{ .RelPermalink }}">Read Guide</a>
+      </div>
+    </article>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{/* ============== CATEGORIES ============== */}}
+<section class="tk-cats">
+  <header class="tk-section-head">
+    <h2>Browse by Category</h2>
+    <p>Pick a category to dive in.</p>
+  </header>
+  <div class="tk-cat-grid">
+    <a class="tk-cat-card" href="{{ "categories/peripherals/" | relLangURL }}">
+      <span class="tk-cat-icon">⌨</span>
+      <span class="tk-cat-name">Peripherals</span>
+      <span class="tk-cat-meta">Keyboards · Mice · Accessories</span>
+    </a>
+    <a class="tk-cat-card" href="{{ "categories/power-charging/" | relLangURL }}">
+      <span class="tk-cat-icon">⚡</span>
+      <span class="tk-cat-name">Power &amp; Charging</span>
+      <span class="tk-cat-meta">GaN Chargers · Batteries · Cables</span>
+    </a>
+    <a class="tk-cat-card" href="{{ "categories/networking/" | relLangURL }}">
+      <span class="tk-cat-icon">⇄</span>
+      <span class="tk-cat-name">Networking</span>
+      <span class="tk-cat-meta">Routers · Mesh · NAS</span>
+    </a>
+    <a class="tk-cat-card" href="{{ "categories/displays/" | relLangURL }}">
+      <span class="tk-cat-icon">▢</span>
+      <span class="tk-cat-name">Displays</span>
+      <span class="tk-cat-meta">Monitors · Portable Screens</span>
+    </a>
+    <a class="tk-cat-card" href="{{ "categories/computers/" | relLangURL }}">
+      <span class="tk-cat-icon">&gt;_</span>
+      <span class="tk-cat-name">Computers</span>
+      <span class="tk-cat-meta">Laptops · Mini PCs · Desktops</span>
+    </a>
+    <a class="tk-cat-card" href="{{ "categories/storage/" | relLangURL }}">
+      <span class="tk-cat-icon">◫</span>
+      <span class="tk-cat-name">Storage</span>
+      <span class="tk-cat-meta">SSD · NAS · Backups</span>
+    </a>
+  </div>
+</section>
+
+{{/* ============== DISCLOSURE BANNER — one-line trust signal ============== */}}
+<section class="tk-trust">
+  <div class="tk-trust-inner">
+    <span class="tk-trust-icon" aria-hidden="true">&#10003;</span>
+    <span class="tk-trust-text">
+      <strong>Editorial Independence:</strong> Our recommendations are never influenced by commission.
+    </span>
+    <a class="tk-trust-link" href="{{ "affiliate-disclosure/" | relLangURL }}">How we stay independent &rarr;</a>
+  </div>
+</section>
+
+{{- end }}

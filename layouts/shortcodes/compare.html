@@ -1,0 +1,68 @@
+{{/* ToolsBoot compare shortcode — reusable product comparison table.
+      Usage:
+      {{< compare
+        products="Samsung 980 Pro,WD Black SN850X,Crucial T700"
+        badges=",Best Value,"
+        cta="B08KHL25W7,B0BFP1WQ2X,B0C1Y4K4LQ"
+      >}}
+      Feature | Product 1 value | Product 2 value | Product 3 value
+      Capacity | 1TB / 2TB | 1TB / 2TB / 4TB | 1TB / 2TB / 4TB
+      {{< /compare >}}
+      Tag defaults to site.Params.amazonTag.
+*/}}
+{{ $products := split (.Get "products") "," }}
+{{ $badges := slice }}
+{{ with .Get "badges" }}{{ $badges = split . "," }}{{ end }}
+{{ $cta := slice }}
+{{ with .Get "cta" }}{{ $cta = split . "," }}{{ end }}
+{{ $tag := .Get "tag" | default (site.Params.amazonTag | default "toolsboot-20") }}
+{{ $rows := split .Inner "\n" }}
+
+<div class="compare-table-wrap">
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>Specification</th>
+      {{ range $i, $p := $products }}
+        <th>
+          {{ trim $p " " | markdownify }}
+          {{ with index $badges $i }}
+            {{ $b := trim . " " }}
+            {{ if ne $b "" }}
+              <br><span class="product-badge">{{ $b }}</span>
+            {{ end }}
+          {{ end }}
+        </th>
+      {{ end }}
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $row := $rows }}
+      {{ $cells := split $row "|" }}
+      {{ if ge (len $cells) 2 }}
+        <tr>
+          {{ range $j, $cell := $cells }}
+            {{ $val := trim $cell " " }}
+            <td>{{ $val | markdownify }}</td>
+          {{ end }}
+        </tr>
+      {{ end }}
+    {{ end }}
+    {{ if $cta }}
+    <tr class="compare-cta-row">
+      <td>Check Price</td>
+      {{ range $i, $asinRaw := $cta }}
+        {{ $asin := trim $asinRaw " " }}
+        {{ if ne $asin "" }}
+          <td>
+            <a class="btn-amazon" href="https://www.amazon.com/dp/{{ $asin }}/?tag={{ $tag }}" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+          </td>
+        {{ else }}
+          <td></td>
+        {{ end }}
+      {{ end }}
+    </tr>
+    {{ end }}
+  </tbody>
+</table>
+</div>

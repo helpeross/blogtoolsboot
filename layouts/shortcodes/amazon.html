@@ -1,0 +1,23 @@
+{{- /*
+  Amazon affiliate link shortcode for PaperMod.
+  Usage:
+    {{< amazon asin="B0XXXXXXX" name="Anker 65W USB-C Charger" >}}
+  Optional params:
+    store  : amazon.com (default) / amazon.co.jp / amazon.de ...
+    tag    : your associates tag (defaults to params.amazonTag)
+    text   : custom link text
+    note   : extra note after the link
+*/ -}}
+{{- $asin := .Get "asin" | default "" -}}
+{{- $name := .Get "name" | default "product" -}}
+{{- $store := .Get "store" | default "amazon.com" -}}
+{{- $tag := .Get "tag" | default (site.Params.amazonTag | default "toolsboot-20") -}}
+{{- $text := .Get "text" | default (printf "Check price on Amazon" ) -}}
+{{- $note := .Get "note" | default "" -}}
+{{- $url := printf "https://www.%s/dp/%s?tag=%s&linkCode=ll1" $store $asin $tag -}}
+<div class="amazon-card">
+  <p class="amazon-disclosure"><strong>Product:</strong> {{ $name }}</p>
+  <p class="amazon-disclosure"><em>Disclosure:</em> As an Amazon Associate we earn from qualifying purchases. Buying through the link below costs you nothing extra.</p>
+  <p><a href="{{ $url }}" target="_blank" rel="sponsored noopener nofollow" class="amazon-link">{{ $text }} →</a></p>
+  {{- with $note }}<p class="amazon-note"><small>{{ . }}</small></p>{{ end }}
+</div>
