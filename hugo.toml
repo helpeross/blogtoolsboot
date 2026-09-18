@@ -76,10 +76,16 @@ pygmentsUseClasses = true
   # ]
 
 [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
     identifier = "posts"
     name = "Reviews"
     url = "/posts/"
-    weight = 10
+    weight = 20
 
   [[menu.main]]
     identifier = "about"

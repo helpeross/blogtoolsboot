@@ -42,6 +42,15 @@ body {
   margin: 0 auto;
   padding: 0 1.5rem;
   height: 64px;
+  align-items: center;
+}
+.tk-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tk-nav-right .menu {
+  align-items: center;
 }
 .header .logo {
   display: flex;
@@ -1138,7 +1147,7 @@ body {
   justify-content: center;
   width: 34px;
   height: 34px;
-  margin-left: 0.65rem;
+  margin-left: 0;
   border-radius: 8px;
   color: var(--tk-orange);
   border: 1px solid rgba(255, 255, 255, 0.3);
