@@ -16,3 +16,6 @@ Thumbs.db
 
 # Local binaries
 /hugo.exe
+
+# local server logs
+hugo-server*.log
