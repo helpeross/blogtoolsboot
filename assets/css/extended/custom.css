@@ -33,6 +33,7 @@ body {
    Header / Navigation
    ========================================================================== */
 .header {
+  position: relative;
   background: var(--tk-charcoal-deep);
   border-bottom: 2px solid var(--tk-orange);
   box-shadow: none;
@@ -1166,8 +1167,8 @@ body {
   outline-offset: 2px;
 }
 .tk-search-overlay {
-  position: fixed;
-  top: 64px;
+  position: absolute;
+  top: calc(100% - 2px);
   right: 24px;
   z-index: 1200;
   width: 360px;
