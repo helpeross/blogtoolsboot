@@ -1,13 +1,13 @@
 ---
 title: "Affiliate Disclosure"
 url: "/affiliate-disclosure/"
-summary: "How affiliate links work on ToolsBoot"
+summary: "How affiliate links work on TBblog"
 showToc: false
 ---
 
 # Affiliate Disclosure
 
-**ToolsBoot** is an independent website, and we want to be completely transparent about how we make money.
+**TBblog** is an independent website, and we want to be completely transparent about how we make money.
 
 ## The short version
 

@@ -1,7 +1,7 @@
 ---
 title: "Contact Us"
 url: "/contact/"
-summary: "How to get in touch with the ToolsBoot team"
+summary: "How to get in touch with the TBblog team"
 showToc: false
 ---
 

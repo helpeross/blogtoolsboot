@@ -1,11 +1,11 @@
 # ============================================================
-# ToolsBoot Tech Blog — Hugo / PaperMod configuration
+# TBblog Tech Blog — Hugo / PaperMod configuration
 # Site: https://blog.toolsboot.com/
 # ============================================================
 
 baseURL = "https://blog.toolsboot.com/"
 locale = "en-us"
-title = "ToolsBoot Tech Blog"
+title = "TBblog"
 theme = "PaperMod"
 
 enableRobotsTXT = true
@@ -18,10 +18,10 @@ pygmentsUseClasses = true
 
 [params]
   env = "production"
-  title = "ToolsBoot Tech Blog"
+  title = "TBblog"
   description = "Practical guides, reviews and buying advice for IT hardware, consumer electronics and everyday tech gadgets."
   keywords = ["tech blog", "electronics review", "IT hardware", "gadget guide", "buying guide", "Amazon deals"]
-  author = "ToolsBoot Editorial Team"
+  author = "TBblog Editorial Team"
   DateFormat = "January 2, 2006"
   defaultTheme = "auto"          # light / dark / auto
   disableThemeToggle = false
@@ -46,7 +46,7 @@ pygmentsUseClasses = true
 
   # 站点标识（炭黑方块 + 橙色 TB）
   [params.label]
-    text = "ToolsBoot"
+    text = "TBblog"
     iconSVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="none"><rect width="32" height="32" rx="6" fill="#0f0f0f"/><text x="16" y="21" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" fill="#ff6b1a" text-anchor="middle">TB</text></svg>'
 
   # 全文搜索（PaperMod 内置 Fuse.js）

@@ -1,13 +1,13 @@
 ---
-title: "About ToolsBoot"
+title: "About TBblog"
 url: "/about/"
 summary: "Who we are and what this blog is about"
 showToc: false
 ---
 
-# About ToolsBoot
+# About TBblog
 
-**ToolsBoot** is an independent technology blog focused on **IT hardware, consumer electronics and everyday tech tools**. We publish practical, hands-on guides, honest product reviews and straightforward buying advice — the kind of article we wish existed before we spent our own money.
+**TBblog** is an independent technology blog focused on **IT hardware, consumer electronics and everyday tech tools**. We publish practical, hands-on guides, honest product reviews and straightforward buying advice — the kind of article we wish existed before we spent our own money.
 
 ## What we cover
 
@@ -31,4 +31,4 @@ Questions, corrections or partnership ideas? Visit the [Contact page](/contact/)
 
 ---
 
-*ToolsBoot Editorial Team*
+*TBblog Editorial Team*

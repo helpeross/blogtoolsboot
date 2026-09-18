@@ -1,4 +1,4 @@
-# ToolsBoot Tech Blog
+# TBblog Tech Blog
 
 A Hugo + PaperMod static blog for IT & consumer electronics content, built to be deployed on **Cloudflare Pages** and ready for **Amazon Associates (Amazon 联盟) review**.
 
@@ -143,4 +143,4 @@ hugo --gc --minify                        # 生产构建到 public/
 
 ---
 
-© 2026 ToolsBoot — As an Amazon Associate, we earn from qualifying purchases.
+© 2026 TBblog — As an Amazon Associate, we earn from qualifying purchases.

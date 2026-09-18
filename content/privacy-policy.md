@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy"
 url: "/privacy-policy/"
-summary: "How ToolsBoot collects, uses and protects your data"
+summary: "How TBblog collects, uses and protects your data"
 showToc: true
 ---
 
@@ -9,7 +9,7 @@ showToc: true
 
 **Last updated: September 2026**
 
-This Privacy Policy explains how **ToolsBoot** ("we", "us", "our") — operating at `https://blog.toolsboot.com` — collects, uses and protects information when you visit our website.
+This Privacy Policy explains how **TBblog** ("we", "us", "our") — operating at `https://blog.toolsboot.com` — collects, uses and protects information when you visit our website.
 
 By using this website, you agree to the practices described in this policy.
 
@@ -46,7 +46,7 @@ You can control or delete cookies through your browser settings. Disabling cooki
 
 ### 3.1 Amazon Associates (affiliate program)
 
-ToolsBoot participates in the **Amazon Services LLC Associates Program**, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+TBblog participates in the **Amazon Services LLC Associates Program**, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
 
 When you click an Amazon affiliate link on our site, Amazon may place cookies on your browser to track your visit and any purchases. This allows us to earn a commission at **no extra cost to you**. Amazon's data practices are governed by [Amazon's own Privacy Notice](https://www.amazon.com/gp/help/customer/display.html?nodeId=468496).
 
