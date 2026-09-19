@@ -77,7 +77,9 @@ const renderResults = (results) => {
 
     for (const result of results) {
         const li = document.createElement('li');
-        const titleText = document.createTextNode(result.item.title);
+        const titleSpan = document.createElement('span');
+        titleSpan.className = 'tk-result-title';
+        titleSpan.textContent = result.item.title;
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         svg.setAttribute('width', '24');
         svg.setAttribute('height', '24');
@@ -96,7 +98,7 @@ const renderResults = (results) => {
         link.href = result.item.permalink;
         link.setAttribute('aria-label', result.item.title);
 
-        li.appendChild(titleText);
+        li.appendChild(titleSpan);
         li.appendChild(svg);
         li.appendChild(link);
         fragment.appendChild(li);
@@ -216,4 +218,10 @@ searchBtn?.addEventListener('keydown', (e) => {
         e.preventDefault();
         toggleOverlay(searchOverlay?.hasAttribute('hidden'));
     }
+});
+/* TBblog: close the search overlay when clicking anywhere outside it */
+document.addEventListener('click', (e) => {
+    if (!searchOverlay || searchOverlay.hasAttribute('hidden')) { return; }
+    if (searchOverlay.contains(e.target) || searchBtn?.contains(e.target)) { return; }
+    searchOverlay.setAttribute('hidden', '');
 });
