@@ -1183,8 +1183,9 @@ body {
 }
 .tk-search-overlay[hidden] { display: none; }
 .tk-search-overlay .searchbox input {
-  padding: 0.42rem 0.8rem;
-  font-size: 0.9rem;
+  padding: 0.22rem 0.7rem;
+  font-size: 0.85rem;
+  line-height: 1.35;
   width: 100%;
   color: #ffffff;
   font-weight: 500;
