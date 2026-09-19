@@ -1178,13 +1178,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-top: 3px solid var(--tk-orange);
   border-radius: 10px;
-  padding: 0.55rem 0.65rem;
+  padding: 0.9rem;
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
 }
 .tk-search-overlay[hidden] { display: none; }
 .tk-search-overlay .searchbox input {
-  padding: 0.22rem 0.7rem;
-  font-size: 0.85rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
   line-height: 1.35;
   width: 100%;
   color: #ffffff;
@@ -1201,19 +1201,19 @@ body {
   background: rgba(255, 255, 255, 0.12);
 }
 .tk-search-overlay .searchResults {
-  margin: 0.35rem 0 0;
+  margin: 0.6rem 0 0;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.35rem;
 }
 .tk-search-overlay .searchResults li {
   background: #0f0f0f;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.3rem 0.65rem;
-  font-size: 0.85rem;
-  line-height: 1.35;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 .tk-search-overlay .searchResults li .tk-result-title {
   flex: 1;
