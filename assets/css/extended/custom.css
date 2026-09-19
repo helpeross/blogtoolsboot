@@ -1218,9 +1218,7 @@ body {
 .tk-search-overlay .searchResults li .tk-result-title {
   flex: 1;
   min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.95rem;
 }
 .tk-search-overlay .searchResults li:hover { border-color: var(--tk-orange); }
 .tk-search-overlay .searchResults li .entry-link { color: inherit; }
