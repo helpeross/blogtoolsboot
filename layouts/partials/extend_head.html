@@ -16,3 +16,7 @@
 <link crossorigin="anonymous" rel="preload" as="fetch" href="/index.json">
 <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}" integrity="{{ $search.Data.Integrity }}"></script>
 {{- end }}
+
+{{- /* Cloudflare Web Analytics (beacon, privacy-first) */}}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "50a756e3201547aea24e2206964a6538"}'></script>
